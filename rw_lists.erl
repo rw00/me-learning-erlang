@@ -1,0 +1,22 @@
+-module(rw_lists).
+
+join_lists(List1, List2) ->
+    List1 ++ List2.
+
+diff_lists(List1, List2) ->
+    List1 -- List2.
+
+% one element
+head(List) ->
+    hd(List).
+
+% remaining elements after head
+tail(List) ->
+    tl(List).
+
+% Returns a list of even numbers of the given list.
+even_numbers(List) ->
+    %%% List comprehension structure:
+    %%%  [SimpleMapFuncUsingSomeVar || SomeVar <- ListToBeComprehended, SimpleFilterFuncUsingSomeVar].
+
+    [X || X <- List, X rem 2 == 0].
